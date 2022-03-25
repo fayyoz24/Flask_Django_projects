@@ -1,21 +1,21 @@
 from unicodedata import name
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+# @app.route("/")
+# def hello_world():
+#     return "<p>Hello, World!</p>"
 
 
 
 @app.route('/')
 def index():
-    return 'Index Page'
+    return render_template("home.html")
 
-@app.route('/hello')
-def hello():
-    return 'Hello, World'
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 
 
