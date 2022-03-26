@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
+{%from "components/image.html" import img%}
+
 {% block title %}Home page{% endblock %}
 
 
 {% block content %}
-    <h1>Index</h1>
+{{img()}}
 {% endblock %}
