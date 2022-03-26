@@ -9,5 +9,7 @@
 
 body{
     background-color:var(--primary_color);
-    color: var(--text-color)
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
 }
