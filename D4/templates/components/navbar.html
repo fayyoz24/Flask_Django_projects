@@ -1,11 +1,28 @@
 {% macro navbar() -%}
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0; margin: 0;">
     <div class="container-fluid">
-      <a class="navbar-brand">Navbar</a>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
+      <img width="10%" src="{{ url_for('static', filename='logo.png') }}" alt="my_logo" style="padding-left: 0; margin-left: 0;">
+      <!-- <img width="10%" src="{{ url_for('static', filename='logo.png') }}" alt="my_logo"> -->
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarScroll" style="--bs-scroll-height: 200px; ">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="display: flex; justify-content: center; width: 100%;" >
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><h1>Home</h1></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#deal_of_week"><h1>Projects</h1></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#welcome_summer"><h1>Experience</h1></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h1>Edcuation</h1></a>
+          </li> 
+        </ul>
+      </div>
+      <img width="10%" src="{{ url_for('static', filename='logo.png') }}" alt="my_logo1">
+    </div> 
   </nav>
 {%- endmacro %}
