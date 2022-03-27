@@ -1,12 +1,60 @@
 {% macro navbar() -%}
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0; margin: 0;">
+<nav class="navbar navbar-expand-sm #05F140 bg-light">
+  <div class="container-fluid">
+    <img width="10%" src="{{ url_for('static', filename='logo.png') }}" alt="my_logo" style="padding: 0; margin: 0; border-radius: 50%;">
+    <!-- <a class="navbar-brand" href="#">Logo</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav" style="display: flex; justify-content: center; width: 100%;">
+        <li class="nav-item" style="margin-right: 10px; padding-right: 10px;">
+          <a class="nav-link active" aria-current="page" href="#"><h2>Home</h2></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#deal_of_week"><h2>Projects</h2></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#welcome_summer"><h2>Experience</h2></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><h2>Education</h2></a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#"><h2>Contact</h2></a>
+        </li>
+
+        <li class="a"
+        style="margin-right: 2px;"><a class="nav-link" href="#"><h2>About</h2></a></li>
+      </ul>
+      
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0; margin: 0;">
     <div class="container-fluid">
       <img width="10%" src="{{ url_for('static', filename='logo.png') }}" alt="my_logo" style="padding-left: 0; margin-left: 0;">
-      <!-- <img width="10%" src="{{ url_for('static', filename='logo.png') }}" alt="my_logo"> -->
+      <img width="10%" src="{{ url_for('static', filename='logo.png') }}" alt="my_logo"> -->
       <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button> -->
-      <div class="collapse navbar-collapse" id="navbarScroll" style="--bs-scroll-height: 200px; ">
+      </button> 
+      <div class="collapse navbar-collapse" id="navbarScroll" style="--bs-scroll-height: 300px; ">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="display: flex; justify-content: center; width: 100%;" >
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"><h1>Home</h1></a>
@@ -24,5 +72,5 @@
       </div>
       <img width="10%" src="{{ url_for('static', filename='logo.png') }}" alt="my_logo1">
     </div> 
-  </nav>
+  </nav>  -->
 {%- endmacro %}
