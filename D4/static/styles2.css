@@ -1,0 +1,13 @@
+:root {
+    --background-color: rgb(36, 41, 37);
+    --primary_color: #8d91c7ff;
+    --secondary-color: #b0daf1ff;
+    --text-color: #fff;
+    /* --main-bg-color: brown; */
+  }
+
+
+body{
+    background-color:var(--primary_color);
+    color: var(--text-color)
+}
