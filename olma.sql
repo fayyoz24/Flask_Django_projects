@@ -1,0 +1,36 @@
+-- SELECT * FROM address     												1-exercise
+-- SELECT district, phone, postal_code FROM address 						2-exercise
+-- SELECT
+-- 	address || ' ' || district || ' ' || postal_code AS full_address		3-exercise
+-- FROM
+-- 	address
+--  SELECT first_name, last_name FROM customer WHERE first_name LIKE 'J%';	4-exercise
+-- SELECT amount FROM payment WHERE amount <5 AND amount>3 					5-exercise
+-- SELECT * FROM payment WHERE payment_date
+-- BETWEEN '2007-02-15' AND '2007-02-20' 									6-exercise
+-- SELECT title FROM film WHERE film_id IN (SELECT film_id FROM inventory); 7-exercise
+-- Insert 5 customers into the database.
+-- SELECT * FROM payment WHERE amount 
+-- BETWEEN 4 AND 6 ORDER BY payment_date DESC; 								8-exercise
+-- SELECT first_name FROM customer 
+-- ORDER BY first_name DESC LIMIT 5; 										9-exercise
+-- SELECT first_name FROM customer
+-- ORDER BY first_name ASC LIMIT 5 OFFSET 10; 								10-exercise
+-- INSERT INTO																11-exercise
+-- customer(
+-- 	store_id,
+-- 	first_name,
+-- 	last_name,
+-- 	email,
+-- 	address_id)
+-- VALUES(
+-- 	2,
+-- 	'Fayyoz',
+-- 	'Usmonov',
+-- 	'fayyozusmon@gmail.com',
+-- 	2)
+-- RETURNING *;
+-- Delete the last customer
+-- DELETE FROM customer 
+-- WHERE customer_id = (SELECT MAX(customer_id) FROM customer)		12-exercise
+-- RETURNING *; 				I had a problem with that please see and tell my mistake
