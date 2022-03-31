@@ -1,12 +1,14 @@
 from flask import Flask
 from flask_restful import Api
-from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Resource
 from flask import request
 import uuid
-from routes.home.HomeRoute import HomeRoute
+from routes.home.HomeRoute import HomeRoute, HomeRoutewithID
+from utils.db import db
+# from flask_sqlalchemy import SQLAlchemy
 
-db = SQLAlchemy()
+
+# db = SQLAlchemy()
 
 def create_app():
 
@@ -17,7 +19,7 @@ def create_app():
     db.create_all(app=app)# create table
     api = Api(app)
     api.add_resource(HomeRoute, '/')
-   # api.add_resource(HomeRoutewithID, '/<string:id>')
+    api.add_resource(HomeRoutewithID, '/<string:id>')
     return app
 
 
