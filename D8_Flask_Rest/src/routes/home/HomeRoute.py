@@ -3,9 +3,7 @@ from flask import request
 import uuid
 from utils.models.user import User
 from utils.db import db
-# from flask_sqlalchemy import SQLAlchemy
 
-# db = SQLAlchemy()
 
 data=[]
 
@@ -16,23 +14,17 @@ class HomeRoute(Resource):
         return {'data':users}
 
     def post(self):
-        # id = str(uuid.uuid4())
+  
         name = request.form["name"]
         last_name = request.form["last_name"]
         email = request.form["email"]
-        # user = {"id":id, "name":name, "last_name":last_name, "email":email}
-        user = User(first_name=name, last_name=last_name, email=email)
+        user_id = str(uuid.uuid4())
+        
+        user = User(user_id = user_id, first_name=name, last_name=last_name, email=email)
         db.session.add(user) #Add user to the database
         db.session.commit() #Commit the changes to the database
         # data.append(user)
         return {'data': user.to_json()}
-
-# def find_obj_by_id(id):
-#     for data_obj in data:
-#         if data_obj["id"] == id:
-#             return data_obj
-#         else:
-#             return None
 
 
 class HomeRoutewithID(Resource):

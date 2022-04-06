@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./src
+    command: python manager.py run -h 0.0.0.0
+    volumes:
+      - ./src/:/app/
+    ports:
+      - 5000:5000
+    env_file:
+      - ./.venv.dev
+    

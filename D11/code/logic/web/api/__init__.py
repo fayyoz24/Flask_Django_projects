@@ -4,8 +4,25 @@ from flask import request
 from flask_sqlalchemy import SQLAlchemy
 import uuid
 
-
 db = SQLAlchemy()
+
+class User(db.Model):
+    user_id = db.Column(db.String(32), primary_key = True, default=str(uuid.uuid4()))
+    first_name = db.Column(db.String(255), nullable=False)
+    last_name = db.Column(db.String(255), nullable=False)
+    email = db.Column(db.String(255), nullable=False, unique=True)
+    created_at = db.Column(db.DateTime, nullable = False, default=db.func.now())
+    def to_json(self):
+        return {
+            'user_id': self.user_id,
+            'first_name': self.first_name, 
+            'last_name': self.last_name,
+            'email': self.email,
+            'created_at': str(self.created_at)
+        }
+
+
+
 app = Flask(__name__)
 app.debug = True
 

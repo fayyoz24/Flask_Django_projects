@@ -9,7 +9,7 @@ import uuid
 # db = SQLAlchemy()
 
 class User(db.Model):
-    user_id = db.Column(db.String(32), primary_key = True, default=str(uuid.uuid4()))
+    user_id = db.Column(db.String(10), primary_key = True)
     first_name = db.Column(db.String(255), nullable=False)
     last_name = db.Column(db.String(255), nullable=False)
     email = db.Column(db.String(255), nullable=False, unique=True)
